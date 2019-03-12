@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol TFAlertControllerDelegate {
+public protocol TFAlertControllerDelegate {
     func alertTextFieldDidEndEditing(text: String);
 }
 
 public class TFAlertController: UIViewController, UIGestureRecognizerDelegate, UITextFieldDelegate {
     
-    var alertView: TFAlertView!;
-    var delegate: TFAlertControllerDelegate?;
+    public var alertView: TFAlertView!;
+    public var delegate: TFAlertControllerDelegate?;
     
-    init(title: String, description: String?) {
+    public init(title: String, description: String?) {
         super.init(nibName: nil, bundle: nil);
         
         self.alertView = TFAlertView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 60, height: 200));

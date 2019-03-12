@@ -8,15 +8,15 @@
 
 import UIKit
 
-class TFAlertView: UIView {
+public class TFAlertView: UIView {
     
-    var titleLabel: UILabel!;
-    var descriptionLabel: UILabel!;
-    var textField: UITextField!;
-    var doneButton: UIButton!;
-    var cancelButton: UIButton!;
+    public var titleLabel: UILabel!;
+    public var descriptionLabel: UILabel!;
+    public var textField: UITextField!;
+    public var doneButton: UIButton!;
+    public var cancelButton: UIButton!;
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame);
         
         self.backgroundColor = .white;
@@ -77,7 +77,7 @@ class TFAlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         self.frame.size.height = self.cancelButton.frame.maxY + 20;
     }
 
