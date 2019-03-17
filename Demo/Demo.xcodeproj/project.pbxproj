@@ -13,8 +13,8 @@
 		4749652F223E9B1800DD4110 /* Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4749652D223E9B1800DD4110 /* Demo.xcdatamodeld */; };
 		47496531223E9B1900DD4110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47496530223E9B1900DD4110 /* Assets.xcassets */; };
 		47496534223E9B1900DD4110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47496532223E9B1900DD4110 /* LaunchScreen.storyboard */; };
-		47B3974F223EAA670076AC6C /* TFAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B3974E223EAA670076AC6C /* TFAlertController.framework */; };
-		47B39750223EAA670076AC6C /* TFAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47B3974E223EAA670076AC6C /* TFAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47EC3EC1223EAB9200E674BD /* TFAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EC3EC0223EAB9200E674BD /* TFAlertController.framework */; };
+		47EC3EC2223EAB9200E674BD /* TFAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47EC3EC0223EAB9200E674BD /* TFAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				47B39750223EAA670076AC6C /* TFAlertController.framework in Embed Frameworks */,
+				47EC3EC2223EAB9200E674BD /* TFAlertController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,7 +40,7 @@
 		47496530223E9B1900DD4110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47496533223E9B1900DD4110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47496535223E9B1900DD4110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47B3974E223EAA670076AC6C /* TFAlertController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TFAlertController.framework; sourceTree = "<group>"; };
+		47EC3EC0223EAB9200E674BD /* TFAlertController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TFAlertController.framework; path = Demo/TFAlertController.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47B3974F223EAA670076AC6C /* TFAlertController.framework in Frameworks */,
+				47EC3EC1223EAB9200E674BD /* TFAlertController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +58,7 @@
 		4749651A223E9B1800DD4110 = {
 			isa = PBXGroup;
 			children = (
-				47B3974E223EAA670076AC6C /* TFAlertController.framework */,
+				47EC3EC0223EAB9200E674BD /* TFAlertController.framework */,
 				47496525223E9B1800DD4110 /* Demo */,
 				47496524223E9B1800DD4110 /* Products */,
 			);
@@ -313,6 +313,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Demo",
 				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,6 +336,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Demo",
 				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
