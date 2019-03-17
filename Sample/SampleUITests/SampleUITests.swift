@@ -2,7 +2,6 @@
 //  SampleUITests.swift
 //  SampleUITests
 //
-//  Created by Yohei Noguchi on 2019/03/12.
 //  Copyright © 2019 Yohei Noguchi. All rights reserved.
 //
 

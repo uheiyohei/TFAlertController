@@ -2,7 +2,6 @@
 //  TFAlertController.h
 //  TFAlertController
 //
-//  Created by Yohei Noguchi on 2019/01/01.
 //  Copyright © 2019 Yohei Noguchi. All rights reserved.
 //
 

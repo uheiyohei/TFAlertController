@@ -2,27 +2,24 @@
 //  TFAlertController.swift
 //  TFAlertController
 //
-//  Created by Yohei Noguchi on 2019/03/05.
 //  Copyright © 2019 Yohei Noguchi. All rights reserved.
 //
 
 import UIKit
 
-public protocol TFAlertControllerDelegate {
-    func alertTextFieldDidEndEditing(text: String);
-}
-
 public class TFAlertController: UIViewController, UIGestureRecognizerDelegate, UITextFieldDelegate {
     
-    public var alertView: TFAlertView!;
-    public var delegate: TFAlertControllerDelegate?;
+    public var alertView: TFAlertView;
+    public var handler: ((String) -> Void)?;
     
-    public init(title: String, description: String?) {
-        super.init(nibName: nil, bundle: nil);
+    public init(title: String, description: String?, handler: ((String) -> Void)?) {
+        self.handler = handler;
         
-        self.alertView = TFAlertView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 60, height: 200));
+        self.alertView = TFAlertView();
         self.alertView.titleLabel.text = title;
         self.alertView.descriptionLabel.text = description;
+        
+        super.init(nibName: nil, bundle: nil);
         
         self.modalPresentationStyle = .overCurrentContext;
         self.modalTransitionStyle = .crossDissolve;
@@ -32,7 +29,7 @@ public class TFAlertController: UIViewController, UIGestureRecognizerDelegate, U
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(white: 0.0, alpha: 0.5);
         
@@ -40,9 +37,11 @@ public class TFAlertController: UIViewController, UIGestureRecognizerDelegate, U
         tapGestureRecognizer.delegate = self;
         self.view.addGestureRecognizer(tapGestureRecognizer);
         
+        self.alertView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 60, height: 0);
         self.alertView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY);
         self.alertView.doneButton.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside);
         self.alertView.cancelButton.addTarget(self, action: #selector(cancelButtonPressed), for: .touchUpInside);
+        self.alertView.textField.delegate = self;
         self.view.addSubview(self.alertView);
         
         let notificationCenter: NotificationCenter = .default;
@@ -50,18 +49,23 @@ public class TFAlertController: UIViewController, UIGestureRecognizerDelegate, U
         notificationCenter.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil);
         notificationCenter.addObserver(self, selector: #selector(textFieldTextChanged), name: UITextField.textDidChangeNotification, object: nil);
         
-        self.alertView.textField.delegate = self;
         self.textFieldTextChanged();
     }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.alertView.updateConstraints();
+        self.alertView.textField.becomeFirstResponder();
+    }
 
-    override public func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @objc private func doneButtonPressed(button: UIButton) {
         self.dismiss(animated: true, completion: nil);
-        self.delegate?.alertTextFieldDidEndEditing(text: self.alertView.textField.text!);
+        self.handler?(self.alertView.textField.text!);
     }
     
     @objc private func cancelButtonPressed(button: UIButton) {
@@ -82,7 +86,6 @@ public class TFAlertController: UIViewController, UIGestureRecognizerDelegate, U
     @objc private func keyboardWillShow(notification: Notification) {
         let userInfo = notification.userInfo!;
         let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue;
-        
         self.alertView.center = CGPoint(x: self.view.frame.midX, y: keyboardFrame.minY / 2);
     }
     
@@ -98,9 +101,9 @@ public class TFAlertController: UIViewController, UIGestureRecognizerDelegate, U
         }
     }
     
-    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.dismiss(animated: true, completion: nil);
-        self.delegate?.alertTextFieldDidEndEditing(text: textField.text!);
+        self.handler?(self.alertView.textField.text!);
         
         return true;
     }
