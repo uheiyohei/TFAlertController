@@ -4,6 +4,8 @@
 
 TFAlertController is a framework of an alert view with text field for iOS.
 
+![Image](/Demo/DemoImage.png)
+
 ## Installation
 
 ### Carthage
