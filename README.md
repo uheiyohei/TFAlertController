@@ -21,8 +21,8 @@ let alertController = TFAlertController(title: "Title", description: "The descri
 })
 
 // The parts on the alert view are customizable.
-alertController.alertView.textField.text = "Default text";
-alertController.alertView.doneButton.setTitle("OK", for: .normal);
+alertController.alertView.textField.text = "Default text"
+alertController.alertView.doneButton.setTitle("OK", for: .normal)
 
 self.present(alertController, animated: true, completion: nil)
 
