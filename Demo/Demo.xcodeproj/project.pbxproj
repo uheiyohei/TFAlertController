@@ -13,18 +13,18 @@
 		4749652F223E9B1800DD4110 /* Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4749652D223E9B1800DD4110 /* Demo.xcdatamodeld */; };
 		47496531223E9B1900DD4110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47496530223E9B1900DD4110 /* Assets.xcassets */; };
 		47496534223E9B1900DD4110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47496532223E9B1900DD4110 /* LaunchScreen.storyboard */; };
-		47EC3EC1223EAB9200E674BD /* TFAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EC3EC0223EAB9200E674BD /* TFAlertController.framework */; };
-		47EC3EC2223EAB9200E674BD /* TFAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47EC3EC0223EAB9200E674BD /* TFAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		474C98A3224BD3A400B9C46D /* TFAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474C98A2224BD3A400B9C46D /* TFAlertController.framework */; };
+		474C98A4224BD3A400B9C46D /* TFAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 474C98A2224BD3A400B9C46D /* TFAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		47B39751223EAA670076AC6C /* Embed Frameworks */ = {
+		474C98A1224BD28400B9C46D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				47EC3EC2223EAB9200E674BD /* TFAlertController.framework in Embed Frameworks */,
+				474C98A4224BD3A400B9C46D /* TFAlertController.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,7 +40,7 @@
 		47496530223E9B1900DD4110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47496533223E9B1900DD4110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47496535223E9B1900DD4110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47EC3EC0223EAB9200E674BD /* TFAlertController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TFAlertController.framework; path = Demo/TFAlertController.framework; sourceTree = "<group>"; };
+		474C98A2224BD3A400B9C46D /* TFAlertController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TFAlertController.framework; path = Demo/TFAlertController.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47EC3EC1223EAB9200E674BD /* TFAlertController.framework in Frameworks */,
+				474C98A3224BD3A400B9C46D /* TFAlertController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +58,7 @@
 		4749651A223E9B1800DD4110 = {
 			isa = PBXGroup;
 			children = (
-				47EC3EC0223EAB9200E674BD /* TFAlertController.framework */,
+				474C98A2224BD3A400B9C46D /* TFAlertController.framework */,
 				47496525223E9B1800DD4110 /* Demo */,
 				47496524223E9B1800DD4110 /* Products */,
 			);
@@ -96,7 +96,7 @@
 				4749651F223E9B1800DD4110 /* Sources */,
 				47496520223E9B1800DD4110 /* Frameworks */,
 				47496521223E9B1800DD4110 /* Resources */,
-				47B39751223EAA670076AC6C /* Embed Frameworks */,
+				474C98A1224BD28400B9C46D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -294,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -310,11 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZUED76D42;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Demo",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Demo";
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -333,11 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZUED76D42;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Demo",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Demo";
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

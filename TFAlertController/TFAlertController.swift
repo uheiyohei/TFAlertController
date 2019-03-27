@@ -76,7 +76,7 @@ public class TFAlertController: UIViewController, UIGestureRecognizerDelegate, U
         self.dismiss(animated: true, completion: nil);
     }
     
-    private func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if (touch.view == self.alertView) {
             return false;
         }

@@ -6,42 +6,16 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		471B463222379C31002EFE27 /* TFAlertController-Universal */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 471B463522379C31002EFE27 /* Build configuration list for PBXAggregateTarget "TFAlertController-Universal" */;
-			buildPhases = (
-				471B463622379C4F002EFE27 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "TFAlertController-Universal";
-			productName = "TFAlertController-Universal";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		4718259A21DB1E0100BCABE4 /* TFAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4718259021DB1E0100BCABE4 /* TFAlertController.framework */; };
 		471825A121DB1E0100BCABE4 /* TFAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4718259321DB1E0100BCABE4 /* TFAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		471825AC21DB738000BCABE4 /* TFAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471825AA21DB738000BCABE4 /* TFAlertController.swift */; };
 		471825AD21DB738000BCABE4 /* TFAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471825AB21DB738000BCABE4 /* TFAlertView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4718259B21DB1E0100BCABE4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4718258721DB1E0100BCABE4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4718258F21DB1E0100BCABE4;
-			remoteInfo = TFAlertController;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		4718259021DB1E0100BCABE4 /* TFAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TFAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4718259321DB1E0100BCABE4 /* TFAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAlertController.h; sourceTree = "<group>"; };
 		4718259421DB1E0100BCABE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4718259921DB1E0100BCABE4 /* TFAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		471825AA21DB738000BCABE4 /* TFAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFAlertController.swift; sourceTree = "<group>"; };
 		471825AB21DB738000BCABE4 /* TFAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,14 +25,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4718259621DB1E0100BCABE4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4718259A21DB1E0100BCABE4 /* TFAlertController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				4718259021DB1E0100BCABE4 /* TFAlertController.framework */,
-				4718259921DB1E0100BCABE4 /* TFAlertControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,24 +90,6 @@
 			productReference = 4718259021DB1E0100BCABE4 /* TFAlertController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4718259821DB1E0100BCABE4 /* TFAlertControllerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 471825A721DB1E0100BCABE4 /* Build configuration list for PBXNativeTarget "TFAlertControllerTests" */;
-			buildPhases = (
-				4718259521DB1E0100BCABE4 /* Sources */,
-				4718259621DB1E0100BCABE4 /* Frameworks */,
-				4718259721DB1E0100BCABE4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4718259C21DB1E0100BCABE4 /* PBXTargetDependency */,
-			);
-			name = TFAlertControllerTests;
-			productName = TFAlertControllerTests;
-			productReference = 4718259921DB1E0100BCABE4 /* TFAlertControllerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,13 +102,7 @@
 				TargetAttributes = {
 					4718258F21DB1E0100BCABE4 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
-					};
-					4718259821DB1E0100BCABE4 = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					471B463222379C31002EFE27 = {
-						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -171,6 +112,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4718258621DB1E0100BCABE4;
 			productRefGroup = 4718259121DB1E0100BCABE4 /* Products */;
@@ -178,8 +120,6 @@
 			projectRoot = "";
 			targets = (
 				4718258F21DB1E0100BCABE4 /* TFAlertController */,
-				4718259821DB1E0100BCABE4 /* TFAlertControllerTests */,
-				471B463222379C31002EFE27 /* TFAlertController-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -192,34 +132,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4718259721DB1E0100BCABE4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		471B463622379C4F002EFE27 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$OUTPUT_DIR\"\nmkdir -p \"$OUTPUT_DIR\"\n\ncp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4718258C21DB1E0100BCABE4 /* Sources */ = {
@@ -231,22 +144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4718259521DB1E0100BCABE4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4718259C21DB1E0100BCABE4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4718258F21DB1E0100BCABE4 /* TFAlertController */;
-			targetProxy = 4718259B21DB1E0100BCABE4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		471825A221DB1E0100BCABE4 /* Debug */ = {
@@ -301,7 +199,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -359,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -393,7 +291,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -419,64 +317,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.uheiyohei.TFAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		471825A821DB1E0100BCABE4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZUED76D42;
-				INFOPLIST_FILE = TFAlertControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.uheiyohei.TFAlertControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		471825A921DB1E0100BCABE4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZUED76D42;
-				INFOPLIST_FILE = TFAlertControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.uheiyohei.TFAlertControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		471B463322379C31002EFE27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZUED76D42;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		471B463422379C31002EFE27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZUED76D42;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -497,24 +339,6 @@
 			buildConfigurations = (
 				471825A521DB1E0100BCABE4 /* Debug */,
 				471825A621DB1E0100BCABE4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		471825A721DB1E0100BCABE4 /* Build configuration list for PBXNativeTarget "TFAlertControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				471825A821DB1E0100BCABE4 /* Debug */,
-				471825A921DB1E0100BCABE4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		471B463522379C31002EFE27 /* Build configuration list for PBXAggregateTarget "TFAlertController-Universal" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				471B463322379C31002EFE27 /* Debug */,
-				471B463422379C31002EFE27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

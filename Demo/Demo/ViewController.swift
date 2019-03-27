@@ -35,8 +35,8 @@ class ViewController: UIViewController {
         
         // You can customize all of the alert view's components; title label, description label, text field, "Done" button, "Cancel" button.
         // For example
-        self.alertController.alertView.textField.text = "Default text";
-        self.alertController.alertView.doneButton.setTitleColor(.red, for: .normal);
+        // self.alertController.alertView.textField.text = "Default text";
+        // self.alertController.alertView.doneButton.setTitleColor(.red, for: .normal);
     }
     
     @objc func buttonTapped() {
