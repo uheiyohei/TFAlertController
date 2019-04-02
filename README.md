@@ -1,5 +1,7 @@
 # TFAlertController
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/hsylife/SwiftyPickerPopover)
+
 ## About
 
 TFAlertController is a framework of an alert view with text field for iOS.
@@ -9,6 +11,8 @@ TFAlertController is a framework of an alert view with text field for iOS.
 ## Installation
 
 ### Carthage
+Add the following line to your Cartfile.
+
 `github "uheiyohei/TFAlertController"`
 
 ## Usage
